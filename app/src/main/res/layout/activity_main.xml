@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_title"
+        android:textSize="@dimen/_30sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="@dimen/_20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="@dimen/_16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/tvMainTitle"/>
+
+    <ImageView
+        android:layout_width="@dimen/_49dp"
+        android:layout_height="@dimen/_49dp"
+        android:src="@drawable/logo"
+        app:layout_constraintStart_toEndOf="@id/tvMainTitle"
+        app:layout_constraintTop_toTopOf="@id/tvMainTitle"
+        app:layout_constraintBottom_toBottomOf="@id/tvMainTitle"
+        android:layout_marginStart="190dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvMainFirst"
+        android:layout_width="370dp"
+        android:layout_height="180dp"
+        app:cardCornerRadius="@dimen/_20dp"
+        app:cardElevation="@dimen/_4dp"
+        app:layout_constraintTop_toBottomOf="@id/tvMainTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/_40dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/blue">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/bg_manfaat_dzikir"/>
+
+            <TextView
+                android:id="@+id/tvManfaat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/manfaat_dzikir"
+                android:layout_marginStart="@dimen/_16dp"
+                android:layout_marginTop="@dimen/_16dp"
+                android:textSize="@dimen/_20sp"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/tvTextManfaat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_manfaat"
+                android:layout_below="@id/tvManfaat"
+                android:layout_marginTop="@dimen/_15dp"
+                android:textSize="@dimen/_15sp"
+                android:textColor="@color/black"
+                android:maxWidth="250dp"
+                android:layout_marginStart="@dimen/_16dp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/praying"
+                android:layout_below="@id/tvManfaat"
+                android:layout_toRightOf="@id/tvTextManfaat"
+                android:layout_marginEnd="@dimen/_16dp"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvDoaHarian"
+        android:layout_width="169dp"
+        android:layout_height="163dp"
+        app:cardElevation="@dimen/_4dp"
+        app:layout_constraintTop_toBottomOf="@id/cvMainFirst"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="@dimen/_20dp"
+        android:layout_marginTop="@dimen/_20dp"
+        app:cardCornerRadius="@dimen/_15dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/lightPurple">
+
+            <ImageView
+                android:id="@+id/ivTasbih"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/tasbih"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/_10dp"
+                android:layout_marginEnd="@dimen/_10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_doa_harian"
+                android:layout_below="@id/ivTasbih"
+                android:textSize="@dimen/_20sp"
+                android:textColor="@color/white"
+                android:layout_marginTop="@dimen/_15dp"
+                android:layout_marginStart="@dimen/_10dp"/>
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvDoaSetelahSholat"
+        android:layout_width="169dp"
+        android:layout_height="163dp"
+        app:cardElevation="@dimen/_4dp"
+        app:layout_constraintTop_toBottomOf="@id/cvMainFirst"
+        app:layout_constraintStart_toEndOf="@id/cvDoaHarian"
+        android:layout_marginStart="@dimen/_28dp"
+        android:layout_marginTop="@dimen/_20dp"
+        app:cardCornerRadius="@dimen/_15dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/darkPurple">
+
+            <ImageView
+                android:id="@+id/ivMasjid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/mosque"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/_10dp"
+                android:layout_marginEnd="@dimen/_10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_doa_sunnah"
+                android:layout_below="@id/ivMasjid"
+                android:textSize="@dimen/_15sp"
+                android:textColor="@color/white"
+                android:layout_marginTop="@dimen/_15dp"
+                android:layout_marginStart="@dimen/_10dp"/>
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvSetiapSaat"
+        android:layout_width="169dp"
+        android:layout_height="163dp"
+        app:cardElevation="@dimen/_4dp"
+        app:layout_constraintTop_toBottomOf="@id/cvDoaHarian"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="@dimen/_20dp"
+        android:layout_marginTop="@dimen/_28dp"
+        app:cardCornerRadius="@dimen/_15dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/green">
+
+            <ImageView
+                android:id="@+id/ivClock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/clock"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/_10dp"
+                android:layout_marginEnd="@dimen/_10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_setiap_saat"
+                android:layout_below="@id/ivClock"
+                android:textSize="@dimen/_20sp"
+                android:maxWidth="120dp"
+                android:textColor="@color/white"
+                android:layout_marginTop="@dimen/_15dp"
+                android:layout_marginStart="@dimen/_10dp"/>
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvPagiPetang"
+        android:layout_width="169dp"
+        android:layout_height="163dp"
+        app:cardElevation="@dimen/_4dp"
+        app:layout_constraintTop_toBottomOf="@id/cvDoaSetelahSholat"
+        app:layout_constraintStart_toEndOf="@id/cvDoaHarian"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="@dimen/_28dp"
+        app:cardCornerRadius="@dimen/_15dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/darkOrange">
+
+            <ImageView
+                android:id="@+id/ivPagiPetang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/day_and_night"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/_10dp"
+                android:layout_marginEnd="@dimen/_10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_pagi_petang"
+                android:layout_below="@id/ivPagiPetang"
+                android:textSize="@dimen/_20sp"
+                android:textColor="@color/white"
+                android:layout_marginTop="@dimen/_15dp"
+                android:layout_marginStart="@dimen/_10dp"/>
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
